@@ -127,22 +127,15 @@ npm run start
 
 ## 🚢 Deployment
 
-### Deploy to Vercel (Recommended)
-1. Push this repository to GitHub (`Yousof-Montasser/portfolio`).
-2. Import the repository into [Vercel](https://vercel.com).
-3. Next.js App Router will be detected automatically. Click **Deploy**.
+### Automated GitHub Pages (Live at `https://yousof-montasser.github.io`)
+This repository (`Yousof-Montasser.github.io`) is automatically deployed to GitHub Pages on every push to `main` via GitHub Actions (`.github/workflows/deploy.yml`):
+1. Runs Next.js static build (`output: "export"`).
+2. Generates optimized HTML, JS, CSS into `/out`.
+3. Publishes directly to the root user domain: **`https://yousof-montasser.github.io`**.
 
-### Static Export (GitHub Pages)
-To export as a static HTML site for GitHub Pages:
-1. Update `next.config.ts`:
-   ```ts
-   const nextConfig: NextConfig = {
-     output: "export",
-     images: { unoptimized: true }
-   };
-   ```
-2. Run `npm run build` to generate the `/out` directory.
-3. Deploy the `/out` directory to your `gh-pages` branch or configure GitHub Actions.
+### Optional: Vercel
+1. Import `Yousof-Montasser/Yousof-Montasser.github.io` into [Vercel](https://vercel.com).
+2. Framework preset will be detected as Next.js. Click **Deploy**.
 
 ---
 
